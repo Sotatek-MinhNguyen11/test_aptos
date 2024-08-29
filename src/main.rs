@@ -22,7 +22,7 @@ async fn main() {
 
     loop {
         // for test
-        latest_version = 1657120524;
+        // latest_version = 1657120524;
         // Fetch transactions starting from the latest known version
         let res_transactions = client.get_transactions(Some(latest_version), Some(1)).await;
 
@@ -79,6 +79,6 @@ async fn main() {
         }
 
         // Wait before polling again
-        sleep(Duration::from_secs(15)).await;
+        sleep(Duration::from_secs(1)).await;
     }
 }
